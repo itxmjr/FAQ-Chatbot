@@ -1,0 +1,16 @@
+[project]
+name = "codealpha-faq-chatbot"
+version = "1.0.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "nltk>=3.9.2",
+    "pytest>=9.0.1",
+    "scikit-learn>=1.7.2",
+    "streamlit>=1.51.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

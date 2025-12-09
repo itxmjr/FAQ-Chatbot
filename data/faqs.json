@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "category": "Account",
+    "question": "How do I create a new account?",
+    "answer": "To create an account, click Sign Up at the top right of the homepage, enter your name, email address, and a secure password, then confirm your email using the verification link we send you."
+  },
+  {
+    "id": 2,
+    "category": "Account",
+    "question": "How can I change my email address?",
+    "answer": "Go to My Account > Account Settings, click Edit next to your email address, enter the new email, and confirm it through the verification link sent to your new address."
+  },
+  {
+    "id": 3,
+    "category": "Account",
+    "question": "I forgot my password. How can I reset it?",
+    "answer": "On the login page, click Forgot password?, enter your registered email address, and follow the instructions in the password reset email we send."
+  },
+  {
+    "id": 4,
+    "category": "Account",
+    "question": "How do I delete my account?",
+    "answer": "If you want to permanently delete your account, go to My Account > Privacy & Security and select Delete my account. Please note that this action cannot be undone."
+  },
+  {
+    "id": 5,
+    "category": "Orders",
+    "question": "How do I place an order?",
+    "answer": "Browse products, add the items you want to your cart, then click Checkout. Enter your shipping information, select a payment method, and confirm the order on the review page."
+  },
+  {
+    "id": 6,
+    "category": "Orders",
+    "question": "Where can I see my order history?",
+    "answer": "You can view all your past and current orders by going to My Account and clicking on My Orders."
+  },
+  {
+    "id": 7,
+    "category": "Orders",
+    "question": "Can I modify my order after placing it?",
+    "answer": "You can edit or cancel an order within a short time window after placing it, as long as it has not yet been prepared for shipping. Go to My Orders, select the order, and check if Modify or Cancel is available."
+  },
+  {
+    "id": 8,
+    "category": "Orders",
+    "question": "How do I cancel my order?",
+    "answer": "Go to My Orders, open the order you want to cancel, and click Cancel order. If the option does not appear, the order may already be in processing or shipped and can no longer be canceled."
+  },
+  {
+    "id": 9,
+    "category": "Shipping",
+    "question": "How can I track my shipment?",
+    "answer": "Once your order has shipped, you will receive a tracking link by email. You can also track it from My Orders by clicking Track shipment next to the relevant order."
+  },
+  {
+    "id": 10,
+    "category": "Shipping",
+    "question": "What are your delivery times?",
+    "answer": "Standard delivery usually takes 3–5 business days. Express delivery options, where available, typically take 1–2 business days depending on your location."
+  },
+  {
+    "id": 11,
+    "category": "Shipping",
+    "question": "Do you offer international shipping?",
+    "answer": "Yes, we ship to many countries worldwide. Available shipping options and costs will appear at checkout after you enter your delivery address."
+  },
+  {
+    "id": 12,
+    "category": "Shipping",
+    "question": "How much does shipping cost?",
+    "answer": "Shipping costs depend on your location, the shipping method you select, and the total weight or size of your order. The final shipping fee is displayed at checkout before you confirm payment."
+  },
+  {
+    "id": 13,
+    "category": "Payments",
+    "question": "What payment methods do you accept?",
+    "answer": "We currently accept major credit and debit cards, PayPal, and selected digital wallets, depending on your region."
+  },
+  {
+    "id": 14,
+    "category": "Payments",
+    "question": "Why was my payment declined?",
+    "answer": "Payments can be declined for several reasons, such as insufficient funds, incorrect card details, or security restrictions from your bank. Please verify your information or contact your bank for more details."
+  },
+  {
+    "id": 15,
+    "category": "Payments",
+    "question": "Is my payment information secure?",
+    "answer": "We use industry-standard encryption and security practices to protect your payment information. We do not store your full card number or CVV on our servers."
+  },
+  {
+    "id": 16,
+    "category": "Payments",
+    "question": "Can I save my card details for future purchases?",
+    "answer": "Yes. During checkout you can choose to save your card for future use. You can manage saved payment methods at any time under My Account > Payment methods."
+  },
+  {
+    "id": 17,
+    "category": "Returns & Refunds",
+    "question": "What is your return policy?",
+    "answer": "Most items can be returned within 30 days of delivery, provided they are unused and in their original packaging. Some items may have different return conditions. Please check the product page for details."
+  },
+  {
+    "id": 18,
+    "category": "Returns & Refunds",
+    "question": "How do I start a return?",
+    "answer": "Go to My Orders, select the order and the item you want to return, then click Return item. Follow the instructions to choose a return reason and shipping method."
+  },
+  {
+    "id": 19,
+    "category": "Returns & Refunds",
+    "question": "When will I receive my refund?",
+    "answer": "Once we receive and inspect your returned item, your refund is typically processed within 3–7 business days. The exact time depends on your payment provider."
+  },
+  {
+    "id": 20,
+    "category": "Returns & Refunds",
+    "question": "Are return shipping costs covered?",
+    "answer": "Return shipping costs depend on the reason for return and your location. If the return is due to our error or a defective product, we usually cover the return shipping."
+  },
+  {
+    "id": 21,
+    "category": "Products",
+    "question": "How can I check if an item is in stock?",
+    "answer": "Product availability is shown on each product page. If an item is out of stock, you can choose to be notified by email when it becomes available again."
+  },
+  {
+    "id": 22,
+    "category": "Products",
+    "question": "Do you offer product warranties?",
+    "answer": "Many of our products include a manufacturer’s warranty. Warranty information is listed on the product page and in your order confirmation email."
+  },
+  {
+    "id": 23,
+    "category": "Products",
+    "question": "Can I see customer reviews before buying?",
+    "answer": "Yes, you can read ratings and reviews from other customers on each product page under the Reviews section."
+  },
+  {
+    "id": 24,
+    "category": "Promotions",
+    "question": "How do I use a discount code?",
+    "answer": "You can enter your discount or promo code in the Promo code field on the checkout page. The discount will be applied before you complete the payment."
+  },
+  {
+    "id": 25,
+    "category": "Promotions",
+    "question": "Why is my promo code not working?",
+    "answer": "Promo codes may expire or have specific conditions such as minimum order value, selected products, or first-time customers only. Check the terms of the offer and ensure the code is entered correctly."
+  },
+  {
+    "id": 26,
+    "category": "Promotions",
+    "question": "Do you offer student or membership discounts?",
+    "answer": "We occasionally run special discounts for students and members. Check our Offers page or subscribe to our newsletter to stay informed."
+  },
+  {
+    "id": 27,
+    "category": "Technical",
+    "question": "I am not receiving your emails. What should I do?",
+    "answer": "Please check your spam or junk folder and add our email address to your contacts. You can also verify that your email address is correct in My Account > Account Settings."
+  },
+  {
+    "id": 28,
+    "category": "Technical",
+    "question": "The website is not loading correctly. How can I fix this?",
+    "answer": "Try clearing your browser cache and cookies, or use a different browser. If the issue persists, check your internet connection or try again later."
+  },
+  {
+    "id": 29,
+    "category": "Support",
+    "question": "How can I contact customer support?",
+    "answer": "You can reach our support team via the Contact Us page, by email, or through live chat during our business hours. Response times may vary depending on volume."
+  },
+  {
+    "id": 30,
+    "category": "Support",
+    "question": "What are your customer support hours?",
+    "answer": "Our customer support team is available Monday to Friday from 9:00 AM to 6:00 PM local time, excluding public holidays."
+  }
+]
