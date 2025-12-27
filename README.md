@@ -28,7 +28,9 @@ A smart, lightweight FAQ chatbot backend built with Python and FastAPI. This ser
 
 ## 🚀 Demo
 
-*(Add a screenshot or GIF of your application here)*
+<p align="center">
+  <img src="./assets/demo.gif" alt="FAQ Chatbot Demo" width="600" />
+</p>
 
 ## 🛠️ Tech Stack
 
@@ -70,7 +72,7 @@ The backend is located in the `backend/` directory.
     ```bash
     cd backend
     pip install .
-    python -m src.nltk_setup # One-time NLTK resource setup
+    python -m src.nltk_setup
     ```
 2.  **Run the server**:
     ```bash
