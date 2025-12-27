@@ -29,7 +29,7 @@ A smart, lightweight FAQ chatbot backend built with Python and FastAPI. This ser
 ## 🚀 Demo
 
 <p align="center">
-  <img src="./assets/demo.gif" alt="FAQ Chatbot Demo" width="600" />
+  <img src="./assets/demo.gif" alt="FAQ Chatbot Demo" width="800" />
 </p>
 
 ## 🛠️ Tech Stack
