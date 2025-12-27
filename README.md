@@ -1,7 +1,7 @@
 ---
 title: FAQ Chatbot
 emoji: 🤖
-colorFrom: grey
+colorFrom: gray
 colorTo: green
 sdk: docker
 pinned: false
