@@ -8,13 +8,6 @@ from .nltk_setup import ensure_nltk_resources
 
 
 class FAQChatbot:
-    """
-    High-level FAQ chatbot:
-    - Loads FAQs
-    - Builds TF-IDF vectors once
-    - Answers user questions by similarity matching
-    """
-
     def __init__(
         self,
         faq_path: str = "data/faqs.json",
@@ -25,14 +18,11 @@ class FAQChatbot:
         self.min_similarity = min_similarity
         self.max_features = max_features
 
-        # Ensure NLTK resources are available
         ensure_nltk_resources()
 
-        # Load FAQ data
         self.faqs = load_faqs(faq_path)
         self.questions, self.answers = get_questions_and_answers(self.faqs)
 
-        # Build TF-IDF vectorizer and matrix once
         self.vectorizer, self.faq_matrix = build_tfidf_vectorizer(
             self.questions,
             max_features=self.max_features,
@@ -84,6 +74,10 @@ class FAQChatbot:
             return []
         n = min(n, len(self.questions))
         return random.sample(self.questions, n)
+
+    def get_all_faqs(self) -> List[dict]:
+        """Return all FAQ items."""
+        return self.faqs
 
 
 # Optional: a lazy singleton for simple scripts

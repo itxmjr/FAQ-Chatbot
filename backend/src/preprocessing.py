@@ -7,7 +7,6 @@ from nltk.stem import WordNetLemmatizer
 
 
 
-# Lazy loaders for NLTK resources
 _stopwords = None
 _lemmatizer = None
 
@@ -26,9 +25,7 @@ def get_lemmatizer():
 
 def clean_text(text: str) -> str:
     text = text.lower()
-    # Keep alphanumeric and spaces, remove everything else
     text = re.sub(r"[^a-z0-9\s]", " ", text)
-    # Collapse multiple spaces
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
