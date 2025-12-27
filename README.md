@@ -1,30 +1,29 @@
 ---
-title: CodeAlpha FAQ Chatbot
+title: FAQ Chatbot
 emoji: 🤖
-colorFrom: red
-colorTo: yellow
-sdk: streamlit
-sdk_version: 1.51.0
-app_file: app.py
+colorFrom: grey
+colorTo: green
+sdk: docker
 pinned: false
 license: mit
 ---
 
-# 🤖 CodeAlpha FAQ Chatbot
+# 🤖 FAQ Chatbot
 
 ![Python](https://img.shields.io/badge/Python-3.13+-blue.svg?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.51+-FF4B4B.svg?style=for-the-badge&logo=Streamlit&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.7+-F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?style=for-the-badge&logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-15+-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.6+-F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-A smart, lightweight FAQ chatbot built with Python and Streamlit. This app uses **TF-IDF (Term Frequency-Inverse Document Frequency)** and **Cosine Similarity** to accurately match user queries against a predefined knowledge base, providing instant and relevant answers.
+A smart, lightweight FAQ chatbot backend built with Python and FastAPI. This service uses **TF-IDF (Term Frequency-Inverse Document Frequency)** and **Cosine Similarity** to accurately match user queries against a predefined knowledge base, providing instant and relevant API responses for modern frontends (like Next.js).
 
 ## ✨ Features
 
 - **Natural Language Understanding**: Uses NLP techniques (Tokenization, N-grams) to understand the intent behind user queries.
 - **High Accuracy Matching**: Powered by Scikit-learn's TF-IDF vectorization and cosine similarity scoring.
-- **Dual Interface**: Interact via a web UI (Streamlit) or a command-line interface (CLI).
-- **Confidence Metrics**: Displays similarity scores to transparently show how well a question matches.
+- **API-First Design**: Optimized for Next.js or other modern frontend integrations.
+- **RESTful Endpoints**: Dedicated endpoints for asking questions, retrieving categories, and getting suggestions.
 - **Easy Customization**: The knowledge base is a simple JSON file, making it easy to update or expand.
 
 ## 🚀 Demo
@@ -34,7 +33,8 @@ A smart, lightweight FAQ chatbot built with Python and Streamlit. This app uses 
 ## 🛠️ Tech Stack
 
 - **[Python](https://www.python.org/)**: Core programming language.
-- **[Streamlit](https://streamlit.io/)**: Framework for building the web interface.
+- **[FastAPI](https://fastapi.tiangolo.com/)**: Modern, fast (high-performance), web framework for building APIs.
+- **[Uvicorn](https://www.uvicorn.org/)**: ASGI server for FastAPI.
 - **[Scikit-learn](https://scikit-learn.org/)**: Machine learning library for vectorization and similarity calculation.
 - **[NLTK](https://www.nltk.org/)**: Natural Language Toolkit for text preprocessing. NLTK resources are automatically managed via `nltk_setup.py`.
 
@@ -44,8 +44,8 @@ Ensure you have Python 3.13 or higher installed.
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/CodeAlpha/CodeAlpha_FAQ_Chatbot.git
-    cd CodeAlpha_FAQ_Chatbot
+    git clone https://github.com/itxmjr/FAQ-Chatbot.git
+    cd FAQ-Chatbot
     ```
 
 2.  **Install Dependencies**
@@ -53,7 +53,7 @@ Ensure you have Python 3.13 or higher installed.
 
     Using `pip`:
     ```bash
-    pip install -r requirements.txt
+    pip install .
     ```
 
     Using `uv` (if applicable):
@@ -63,39 +63,61 @@ Ensure you have Python 3.13 or higher installed.
 
 ## 🎮 Usage
 
-### Option 1: Web Interface (Streamlit)
-For a visual, interactive experience:
-```bash
-streamlit run app.py
-```
-Open your browser at `http://localhost:8501`.
+### 🐍 Backend (FastAPI)
+The backend is located in the `backend/` directory.
 
-### Option 2: Command Line Interface (CLI)
-To chat directly from your terminal:
-```bash
-python -m src.app_cli
-```
+1.  **Install & Setup**:
+    ```bash
+    cd backend
+    pip install .
+    python -m src.nltk_setup # One-time NLTK resource setup
+    ```
+2.  **Run the server**:
+    ```bash
+    uvicorn src.api:app --reload --port 8000
+    ```
+    Access API docs at `http://localhost:8000/docs`.
 
-### Initial Setup
-The application will automatically check for and download necessary NLTK resources (stopwords, punkt, etc.) the first time you run it, using `src/nltk_setup.py`.
+### ⚛️ Frontend (Next.js)
+The frontend is located in the `frontend/` directory.
+
+1.  **Install dependencies**:
+    ```bash
+    cd frontend
+    npm install
+    ```
+2.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+    Access the app at `http://localhost:3000`.
+
+## 🧪 Testing
+
+### Backend Tests
+Run the backend tests using `pytest`:
+```bash
+cd backend
+pytest
+```
 
 ## 📂 Project Structure
 
 ```
-CodeAlpha_FAQ_Chatbot/
-├── app.py                 # Main Streamlit application entry point
-├── data/
-│   └── faqs.json          # Knowledge base (JSON format)
-├── src/
-│   ├── app_cli.py         # Command-line interface for the chatbot
-│   ├── chatbot.py         # Core Chatbot class implementation
-│   ├── vectorizer.py      # TF-IDF vectorization logic
-│   ├── similarity.py      # Cosine similarity calculation
-│   ├── nltk_setup.py      # Automated NLTK resource downloader
-│   ├── preprocessing.py   # Text cleaning and tokenization
-│   └── data_loader.py     # JSON data loading utilities
-├── tests/                 # Unit tests
-└── requirements.txt       # Project dependencies
+FAQ-Chatbot/
+├── backend/               # FastAPI backend service
+│   ├── src/               # Backend source code
+│   │   ├── api.py         # API endpoints
+│   │   ├── chatbot.py     # Core chatbot logic
+│   │   └── ...
+│   ├── pyproject.toml     # Project configuration
+│   └── ...
+├── frontend/              # Next.js frontend application
+│   ├── src/               # Frontend source code (pages, components)
+│   ├── public/            # Static assets
+│   └── ...
+├── .gitignore             # Root-level ignore file
+└── README.md              # Project documentation
 ```
 
 ## 🤝 Contributing
@@ -112,7 +134,7 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 This application is deployed on Hugging Face Spaces.
 
-Space: https://huggingface.co/spaces/itxmjr/CodeAlpha_FAQ_Chatbot
+Space: https://huggingface.co/spaces/itxmjr/FAQ-Chatbot
 
 ## 📜 License
 
@@ -121,5 +143,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by M Jawad ur Rehman using Streamlit and Python.</sub>
+  <sub>Built with ❤️ by M Jawad ur Rehman.</sub>
 </div>

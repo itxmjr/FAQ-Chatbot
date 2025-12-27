@@ -2,13 +2,10 @@ import sys
 import nltk
 from pathlib import Path
 
-# venv root detection
 VENV_DIR = Path(sys.prefix)
 NLTK_DATA_DIR = VENV_DIR / "nltk_data"
-# Ensure the directory exists so NLTK sees it
 NLTK_DATA_DIR.mkdir(exist_ok=True)
 
-# Add to NLTK search path so it finds data there
 if str(NLTK_DATA_DIR) not in nltk.data.path:
     nltk.data.path.append(str(NLTK_DATA_DIR))
 
@@ -30,13 +27,11 @@ def ensure_nltk_resources() -> None:
     for pkg in REQUIRED_PACKAGES:
         missing = False
         try:
-            # Check if the resource is already present.
             try:
                 nltk.data.find(f"tokenizers/{pkg}")
             except LookupError:
                 nltk.data.find(f"corpora/{pkg}")
         except (LookupError, zipfile.BadZipFile):
-            # If lookup fails OR file is corrupted, mark as missing
             missing = True
 
         if missing:
@@ -48,4 +43,3 @@ def ensure_nltk_resources() -> None:
 
 if __name__ == "__main__":
     ensure_nltk_resources()
-    print("NLTK resources checked/downloaded.")
