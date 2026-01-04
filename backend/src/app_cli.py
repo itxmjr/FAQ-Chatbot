@@ -1,7 +1,7 @@
 from .chatbot import FAQChatbot
 
 def main() -> None:
-    print("=== FAQ Chatbot ===")
+    print("=== Knowledge Assistant ===")
     print("Loading knowledge base...")
     bot = FAQChatbot(min_similarity=0.3)
     

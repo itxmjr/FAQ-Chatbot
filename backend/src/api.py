@@ -5,8 +5,8 @@ from typing import List, Optional
 from .chatbot import FAQChatbot, get_default_bot
 
 app = FastAPI(
-    title="FAQ Chatbot API",
-    description="Backend API for the FAQ Chatbot, serving Next.js and other clients.",
+    title="Knowledge Assistant API",
+    description="Backend API for the Knowledge Assistant, serving Next.js and other clients.",
     version="1.0.0"
 )
 
@@ -28,7 +28,7 @@ class QueryResponse(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the FAQ Chatbot API", "status": "online"}
+    return {"message": "Welcome to the Knowledge Assistant API", "status": "online"}
 
 @app.post("/ask", response_model=QueryResponse)
 async def ask_question(request: QueryRequest):

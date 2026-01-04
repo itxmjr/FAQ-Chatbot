@@ -1,5 +1,5 @@
 ---
-title: FAQ Chatbot
+title: Knowledge Assistant
 emoji: 🤖
 colorFrom: gray
 colorTo: green
@@ -8,7 +8,7 @@ pinned: false
 license: mit
 ---
 
-# 🤖 FAQ Chatbot
+# 🤖 Knowledge Assistant
 
 ![Python](https://img.shields.io/badge/Python-3.13+-blue.svg?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?style=for-the-badge&logo=fastapi&logoColor=white)
@@ -16,7 +16,7 @@ license: mit
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.6+-F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-A smart, lightweight FAQ chatbot backend built with Python and FastAPI. This service uses **TF-IDF (Term Frequency-Inverse Document Frequency)** and **Cosine Similarity** to accurately match user queries against a predefined knowledge base, providing instant and relevant API responses for modern frontends (like Next.js).
+A smart, lightweight knowledge assistant backend built with Python and FastAPI. This service uses **TF-IDF (Term Frequency-Inverse Document Frequency)** and **Cosine Similarity** to accurately match user queries against a predefined knowledge base, providing instant and relevant API responses for modern frontends (like Next.js).
 
 ## ✨ Features
 
@@ -29,7 +29,7 @@ A smart, lightweight FAQ chatbot backend built with Python and FastAPI. This ser
 ## 🚀 Demo
 
 <p align="center">
-  <img src="./assets/demo.gif" alt="FAQ Chatbot Demo" width="800" />
+  <img src="./assets/demo.gif" alt="Knowledge Assistant Demo" width="800" />
 </p>
 
 ## 🛠️ Tech Stack
@@ -46,8 +46,8 @@ Ensure you have Python 3.13 or higher installed.
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/itxmjr/FAQ-Chatbot.git
-    cd FAQ-Chatbot
+    git clone https://github.com/itxmjr/Knowledge-Assistant.git
+    cd Knowledge-Assistant
     ```
 
 2.  **Install Dependencies**
@@ -106,7 +106,7 @@ pytest
 ## 📂 Project Structure
 
 ```
-FAQ-Chatbot/
+Knowledge-Assistant/
 ├── backend/               # FastAPI backend service
 │   ├── src/               # Backend source code
 │   │   ├── api.py         # API endpoints
@@ -122,6 +122,12 @@ FAQ-Chatbot/
 └── README.md              # Project documentation
 ```
 
+## 🌍 Deployment
+
+Deployed on Hugging Face Spaces.
+
+Space: https://itxmjr-Knowledge-Assistant.hf.space
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
@@ -131,12 +137,6 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
 4.  Push to the branch (`git push origin feature/AmazingFeature`).
 5.  Open a Pull Request.
-
-## 🌍 Deployment
-
-This application is deployed on Hugging Face Spaces.
-
-Space: https://huggingface.co/spaces/itxmjr/FAQ-Chatbot
 
 ## 📜 License
 

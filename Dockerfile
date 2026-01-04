@@ -1,4 +1,4 @@
-# Build stage for Next.js frontend
+# Build stage for Knowledge Assistant frontend
 FROM node:20-slim AS frontend-builder
 WORKDIR /app/frontend
 COPY frontend/package*.json ./
